@@ -1,0 +1,166 @@
+Agenda
+
+1. set up the github{Repository} for team work.
+    a) create a new environment
+    b) setup.py
+    c) requirements.txt
+
+Repository: mshoaibCloud/mlprojectfinal
+after create it show the something.
+
+>code .
+and goto Terminal and create the new environment
+
+mlprojectfinal>python -m venv venv
+
+# activate
+.\venv\Scripts\activate
+
+#if you want to create a new project with its own env
+>python -m venv D:\MLPROJECTS\mlproject2\venv
+
+'.\.venv\Scripts\activate'
+
+deactivate
+
+
+# how we connect with github
+
+# first of all,
+we activate the venv for this project,
+and   
+
+venv>git init
+Initialized empty Git repository in D:/MLPROJECTS/mlprojectfinal/.git/
+# now create an new file README.md
+>git add README.md 
+#noted that its color is green mean it is waiting to commit with git.
+>git commit -m "first commit"
+done: and change color grey mean ok.
+[master (root-commit) 8999f65] first commit for add Readme.md file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+#so i want to see 
+>git status
+
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what
+will be committed)
+
+        Agenda.txt
+        venv/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+#noted that it is untracked not going to github, when i push it.
+so how we track it.
+
+Now we check first the main branch:
+>git branch -M main
+and see it
+>git remote -v
+#noted that its nothing to do push and pull
+>git remote add origin https://github.com/mshoaibcloud/mlprojectfinal.git
+
+>git remote add origin https://github.com/mshoaibcloud/mlproject.git
+>git remote -v
+# now it show the origin path to push and pull.
+origin  https://github.com/mshoaibcloud/mlprojectfinal.git (fetch)
+origin  https://github.com/mshoaibcloud/mlprojectfinal.git (push)
+
+it's Okay: now we push the file into it.
+now check the global config:
+git global config:
+git config --global user.name 'mshoaibcloud'
+git config --global user.email ''  # this will show you the email.
+git config --global user.email ""  # if you want to change the email.
+
+
+>git push -u origin main
+now reloaded it
+
+
+Now we create a new file .gitignore [Python] and change commit
+similarly you create other file and pull it.
+>git pull
+
+Now we create 2 -files
+setup.py and 
+Writing script for setup.py
+beacuse it is responsible for 
+building a ml application as a package.
+and you can also install this package in your project.
+and even deploy in PiPi.
+
+see the setup.py code:
+from setuptools import find_packages,setup
+
+setup()
+
+
+requirements.txt
+There are many packages by search python pypi,
+[seaborn]
+
+After >pip install -r requirements.txt
+
+it build the mlprojectfinal.egg-info folder 
+the structure of the project.
+
+Now if we add them to github,
+
+>git add .
+>git status
+>git commit -m "setup the project"
+
+
+
+
+
+
+
+Before going to push 
+> git add .
+> git commit -m "setup"
+
+>git push -u origin main
+now reloaded it
+
+
+#check pull:
+When you enter into the git repository: create a new file .gitignore and choose the python language.
+
+Now we change the commit: Create the .gitignore file. and click on the commit changes
+
+So we have 2-files : 1.README.md and 2. .gitignore
+
+Now > git pull
+
+Next we create a setup.py and requirements.txt file
+
+search python setup.py and see the writing script:
+write script in setup.py,
+
+and then run> pip install -r requirements.txt
+
+
+
+git remote add origin https://github.com/mshoaibcloud/mlproject.git
+git branch -M main
+
+#After complete the process
+> git add .
+> git status
+
+> git commit -m "setup"
+
+>git push -u origin main
+
+
+
+
+
+
+
